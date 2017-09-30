@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'avatar'
     ];
 
     /**
@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    /*
+        获取此用户的帖子文章
+    */
+    public function discussions()
+    {
+        return $this->hasMany('App\Model\Discussion');
+    }
 }
