@@ -10,7 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+Route::get('/', 'PostsController@index');
+Route::resource('discussions', 'PostsController');
+
+Route::get('/user/register', 'UsersController@register');
+Route::get('/user/login', 'UsersController@login');
+Route::post('/user/login', 'UsersController@signin');
+Route::get('/user/logout', 'UsersController@logout');
+Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail');
+Route::post('/user/register', 'UsersController@store');
+
+

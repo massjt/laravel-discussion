@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar'
+        'name', 'email', 'password', 'avatar', 'confirm_code'
     ];
 
     /**
@@ -32,5 +32,10 @@ class User extends Authenticatable
     public function discussions()
     {
         return $this->hasMany('App\Model\Discussion');
+    }
+
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = \Hash::make($password);
     }
 }
