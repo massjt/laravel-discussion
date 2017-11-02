@@ -26,3 +26,7 @@ Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail');
 Route::post('/user/register', 'UsersController@store');
 
 
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');

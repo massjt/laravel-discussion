@@ -4,7 +4,7 @@
     <div class="jumbotron">
         <div class="container">
             <h2>欢迎来到西班牙社区
-                <a class="btn btn-primary btn-lg pull-right" href="#" role="button">发布帖子</a>
+                <a class="btn btn-primary btn-lg pull-right" href="/discussions/create/" role="button">发布帖子</a>
             </h2>
         </div>
     </div>
